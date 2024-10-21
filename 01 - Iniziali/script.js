@@ -2,17 +2,25 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 
-
-// Dichiara la funzione qui.
 const firstCharacters = [];
 
-names.forEach(function(currentItem) {
-    let firstCharacter = currentItem.charAt(0);
-    firstCharacters.push(firstCharacter);
-})
+// Dichiara la funzione qui.
+
+const extractFirstCharacter = (string) => {
+    result = string.charAt(0);
+    return result;
+}
+
+console.log(extractFirstCharacter(names[0]));
+
+
+
 
 // Invoca la funzione qui e stampa il risultato in console
-
+names.forEach(function(currentItem) {
+    let firstCharacter = extractFirstCharacter(currentItem);
+    firstCharacters.push(firstCharacter);
+})
 
 
 //Risultato atteso: ["A", "L", "M", "A", "G", "A"]
