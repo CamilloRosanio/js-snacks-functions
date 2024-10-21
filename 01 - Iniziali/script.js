@@ -2,11 +2,10 @@
 
 const names = ["Anna", "Luca", "Marco", "Adele", "Giovanni", "Alessandra"];
 
-// Dichiaro un nuovo array vuoto dove accumulerò il risultato finale
-const firstCharacters = [];
-
 
 // Dichiara la funzione qui.
+const firstCharacters = [];
+
 names.forEach(function(currentItem) {
     let firstCharacter = currentItem.charAt(0);
     firstCharacters.push(firstCharacter);

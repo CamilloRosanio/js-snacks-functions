@@ -4,10 +4,13 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
-
+const unSaluto = (string) => `Ciao ${string}, benvenuto!`;
 
 // Invoca la funzione qui e stampa il risultato in console
 
+let myResult = unSaluto(name);
 
 
 //Risultato atteso se si passa 'Mario': // ciao Mario
+
+console.log(myResult);

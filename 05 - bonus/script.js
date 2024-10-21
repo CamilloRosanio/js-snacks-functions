@@ -9,10 +9,25 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
+const hourBasedGreetings = (userName) => {
+    let time = (new Date()).getHours();
+    let outputMessage;
+
+    if (time > 0 && time < 13) {
+        outputMessage = `Buongiorno a te ${userName}!`;
+    } else if (time >= 13 && time <= 17) {
+        outputMessage = `Buon pomeriggio a te ${userName}!`;
+    } else {
+        outputMessage = `Buonasera a te ${userName}!`;
+    }
+
+    return outputMessage;
+}
+
 
 
 // Invoca la funzione qui e stampa il risultato in console
-
-
+let myResult = hourBasedGreetings(name);
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
+console.log(myResult);
