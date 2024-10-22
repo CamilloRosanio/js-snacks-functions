@@ -6,8 +6,14 @@ const firstCharacters = [];
 
 // Dichiara la funzione qui.
 
-const extractFirstCharacter = (string) => {
-    result = string.charAt(0);
+function extractFirstCharacter (string) {
+    
+    // OPZIONE 1
+    // result = string.charAt(0);
+    // return result;
+
+    // OPZIONE 2 Mapping
+    const result = string.map((string => string[0]));
     return result;
 }
 
@@ -18,8 +24,11 @@ console.log(extractFirstCharacter(names[0]));
 
 // Invoca la funzione qui e stampa il risultato in console
 names.forEach(function(currentItem) {
+    const firstCharacters = [];
     let firstCharacter = extractFirstCharacter(currentItem);
     firstCharacters.push(firstCharacter);
+
+    return firstCharacters;
 })
 
 

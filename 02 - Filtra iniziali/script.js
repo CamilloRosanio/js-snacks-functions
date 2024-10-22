@@ -8,7 +8,7 @@ const searchedSubstring = 'A';
 // Dichiara la funzione qui.
 const filterBySubstring = (needle, haystack) => {
 
-    filteredArray = [];
+    const filteredArray = [];
     
     for (let i = 0; i < haystack.length; i++) {
         currentItem = haystack[i];
@@ -21,9 +21,12 @@ const filterBySubstring = (needle, haystack) => {
     }
 
     return filteredArray;
-}
-// Invoca la funzione qui e stampa il risultato in console
 
+    // OPZIONE CON .filter
+    // return haystack.filter((haystack) => haystack[0] === needle);
+}
+
+// Invoca la funzione qui e stampa il risultato in console
 let myResult = filterBySubstring(searchedSubstring, names);
 
 
